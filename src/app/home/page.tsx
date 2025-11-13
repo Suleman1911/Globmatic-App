@@ -1,18 +1,29 @@
-import Link from 'next/link'
-import React from 'react'
-
+import Image from "next/image"
+import OurStoryPic from "../images/home-image-1.jpg"
 const page = () => {
   return (
-    <div>
-      <h1>Welcome to Home page </h1>
-      <h2>
-        <Link href="/blog"> Blog Page</Link>
-      </h2><h2>
-        <Link href="/settings"> Settings Page</Link>
-      </h2><h2>
-        <Link href="/conference"> Conference Page</Link>
-      </h2>
-    </div>
+    <>
+
+      <div className="fixed h-[100vh] w-[100vw] overflow-hidden" style={{ zIndex: -1 }}>
+        <Image
+          src={OurStoryPic}
+          alt="Our Story Picture"
+          quality={100}
+          sizes={"100vw"}
+          fill
+          placeholder="blur"
+          style={{
+            objectFit: 'cover'
+          }}
+        />
+        </div>
+      <h1 className="m-0 pt-6 text-[56px] font-extrabold leading-[45px] text-center">
+        Humble Beginnings a story of life
+      </h1>
+      <p className="m-0 pt-6 text-[30px] text-center">
+        How we became the farmers of the future, tilling the techology of tomorrow today.
+      </p>
+    </>
   )
 }
 

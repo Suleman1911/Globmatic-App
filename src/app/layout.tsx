@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
-const openSans = Open_Sans({ 
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "800"],
- });
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +20,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        <header className="w-full py-[50px] px-0 bg-[#212121] text-[#ffffff] text-center justify-center">
+        <h1>
+          <Link className="text-[#bdfef2]" href="/home"> Globmantic </Link>
+        </h1>
+        <h2>
+          <Link className="text-[#bdfef2]" href="/blog"> Blog Page</Link>
+        </h2>
+        <h2>
+          <Link className="text-[#bdfef2]" href="/settings"> Settings Page</Link>
+        </h2>
+        <h2>
+          <Link className="text-[#bdfef2]" href="/conference"> Conference Page</Link>
+        </h2>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
