@@ -9,7 +9,7 @@ const page = () => {
           src={OurStoryPic}
           alt="Our Story Picture"
           quality={100}
-          sizes={"1oovw"}
+          sizes={"100vw"}
           fill
           placeholder="blur"
           style={{
