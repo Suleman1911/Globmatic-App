@@ -5,7 +5,6 @@ const page = () => {
   return (
     <div>
       <h1>Welcome to Globmatic </h1>
-      <Link href="/home"> home</Link>
     </div>
   )
 }
